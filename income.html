@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="Viewport"
+              content="width=device-width" />
+        
+        <title>ClassicHando's Financial Friend</title>
+
+        <link rel="stylesheet"
+              href="styles/PageStyle.css" />
+        <link rel="stylesheet"
+              href="styles/MainTabs.css" />
+        <link rel="stylesheet"
+              href="styles/income.css" />
+
+              <script src="scripts/income.js"></script>
+    </head>
+
+    <body onLoad="initializer()">
+        <div class="MainTabs">
+            <div class="TabContainer">
+                <div id="Group1" class="MainTabGroup">
+                    <div class="ButtonContainer">
+                        <a href="index.html"><button class="MainButton">Welcome</button></a>
+                        <a href="goals.html"><button class="MainButton">Groovy<br>Goals</button></a>
+                        <a><button class="MainButton Selected">Income<br>Initializer</button></a>
+                        <a href="budget.html"><button class="MainButton">Budget<br>Buddy</button></a>
+                    </div>
+                </div>
+
+                <div id="Group2" class="MainTabGroup">
+                    <div class="ButtonContainer">
+                        <a href="loan.html"><button class="MainButton">Loan Term<br>Estimator</button></a>
+                        <a href="resources.html"><button class="MainButton">Resources</button></a>
+                        <a href="about.html"><button class="MainButton">About</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="incomeGroup" class="MainContent">
+            <div id="incomeMain">
+                <div id="incomeHeader" class="header">
+                    <h1>Income Initializer</h1>
+                </div>
+
+                <div id="incomeInstructions" class="instruction">
+                    <p>
+                        This is the income initializer! Select what type of income you have below and then
+                        fill in the information. The calculator will take care of the rest! No currency 
+                        symbols or percent signs are needed.
+                    </p>
+                </div>        
+
+                
+                <div id="incomeRadios">
+                    <div><label><input type="radio" onChange="checkBoxChanged()" id="hourlyRadio" name="incomeRadioButtons" checked>Hourly</label></div>
+                    <div><label><input type="radio" onChange="checkBoxChanged()" id="salaryRadio" name="incomeRadioButtons">Salary</label></div>
+                    <div><label><input type="radio" onChange="checkBoxChanged()" id="monthlyRadio" name="incomeRadioButtons">Seasonal (Monthly)</label></div>
+                    <div><label><input type="radio" onChange="checkBoxChanged()" id="quarterlyRadio" name="incomeRadioButtons">Seasonal (Quarterly)</label></div>
+                </div>
+
+                <div class="horizontalPad"></div>
+
+                <div class="incomeInputRow">
+                        
+                    <div class="incomeText">
+                        <p id="january" class="hourly salary quarterly all">January</p>
+                    </div>
+                    <div class="incomeInput">
+                        <input id="januaryInput" onClick="this.setSelectionRange(0, this.value.length)" onChange="updater()" class="hourly salary quarterly all" type="text" maxlength="15">
+                    </div>
+
+                    <div class="incomeText">
+                        <p id="july" class="hourly quarterly all">July</p>
+                    </div>
+                    <div class="incomeInput">
+                        <input id="julyInput" onClick="this.setSelectionRange(0, this.value.length)" onChange="updater()" class="hourly quarterly all julyInput" type="text" maxlength="15">                        
+                    </div>
+                </div>
+
+                <div class="incomeInputRow">
+                        
+                    <div class="incomeText">
+                        <p id="february" class="hourly salary quarterly all">February</p>
+                    </div>
+                    <div class="incomeInput">
+                        <input id="februaryInput" onClick="this.setSelectionRange(0, this.value.length)" onChange="updater()" class="hourly salary quarterly all" type="text" maxlength="15">
+                    </div>
+
+                    <div class="incomeText">
+                        <p id="august" class="quarterly all">August</p>
+                    </div>
+                    <div class="incomeInput">
+                        <input id="augustInput" onClick="this.setSelectionRange(0, this.value.length)" onChange="updater()" class="quarterly all" type="text" maxlength="15">                        
+                    </div>
+                </div>
+
+                <div class="incomeInputRow">
+                        
+                    <div class="incomeText">
+                        <p id="march" class="all">March</p>
+                    </div>
+                    <div class="incomeInput">
+                        <input id="marchInput" onClick="this.setSelectionRange(0, this.value.length)" onChange="updater()" class="all" type="text" maxlength="15">
+                    </div>
+
+                    <div class="incomeText">
+                        <p id="september" class="all">September</p>
+                    </div>
+                    <div class="incomeInput">
+                        <input id="septemberInput" onClick="this.setSelectionRange(0, this.value.length)" onChange="updater()" class="all" type="text" maxlength="15">                        
+                    </div>
+                </div>
+
+                <div class="incomeInputRow">
+                        
+                    <div class="incomeText">
+                        <p id="april" class="hourly salary all">April</p>
+                    </div>
+                    <div class="incomeInput">
+                        <input id="aprilInput" onClick="this.setSelectionRange(0, this.value.length)" onChange="updater()" class="all" type="text" maxlength="15">
+                    </div>
+
+                    <div class="incomeText">
+                        <p id="october" class="all">October</p>
+                    </div>
+                    <div class="incomeInput">
+                        <input id="octoberInput" onClick="this.setSelectionRange(0, this.value.length)" onChange="updater()" class="all" type="text" maxlength="15">                        
+                    </div>
+                </div>
+
+                <div class="incomeInputRow">
+                        
+                    <div class="incomeText">
+                        <p id="may" class="hourly salary all">May</p>
+                    </div>
+                    <div class="incomeInput">
+                        <input id="mayInput" onClick="this.setSelectionRange(0, this.value.length)" onChange="updater()" class="hourly salary all" type="text" maxlength="15">
+                    </div>
+
+                    <div class="incomeText">
+                        <p id="november" class="salary hourly all">November</p>
+                    </div>
+                    <div class="incomeInput">
+                        <input id="novemberInput" onClick="this.setSelectionRange(0, this.value.length)" onChange="updater()" class="hourly salary all" type="text" maxlength="15">                        
+                    </div>
+                </div>
+
+                <div class="incomeInputRow">
+                        
+                    <div class="incomeText">
+                        <p id="june" class="all">June</p>
+                    </div>
+                    <div class="incomeInput">
+                        <input id="juneInput" onClick="this.setSelectionRange(0, this.value.length)" onChange="updater()" class="all" type="text" maxlength="15">
+                    </div>
+
+                    <div class="incomeText">
+                        <p id="december" class="all">December</p>
+                    </div>
+                    <div class="incomeInput">
+                        <input id="decemberInput" onClick="this.setSelectionRange(0, this.value.length)" onChange="updater()" class="all" type="text" maxlength="15">                        
+                    </div>
+                </div>
+
+                <div id="incomeFooter">
+                    <p class="small"> 
+                        A simple way to estimate your tax deduction is to take the amount your check is 
+                        for and divide it by the amount you earned. Then multiply that by 100 to get the %.<br><br>
+                        100 x ((paycheck amount) ÷ (total earned)) = Estimated Tax Percent<br><br>
+                        The additional fields are optional and if you are using those, I expect you also 
+                        know the amounts that are going to different places. Remember or write down the 
+                        Estimated Monthly Takehome number for use in Budget Buddy on the next page!<br><br>
+                        ©2023 Chris Hand
+                    </p>
+                </div>
+            </div>
+
+
+            <div id="incomeResults">
+                <div id="incomeTexts">
+                    <div class="padderLarge"></div>
+
+                    <div class="incomeResults">
+                        <p class="resultLabel">Est. Monthly Takehome:</p>
+                        <input id="monthlyTake" class="resultText" disabled />
+                    </div>
+                    <div class="incomeResults">
+                        <p class="resultLabel">Est. Yearly Takehome:</p>
+                        <input id="yearlyTake" class="resultText" disabled />
+                    </div>
+
+                    <div class="padderSmall"></div>
+
+                    <div class="incomeResults">
+                        <p class="resultLabel gross">Est. Monthly Gross:</p>
+                        <input id="monthlyGross" class="resultText gross" disabled />
+                    </div>
+                    <div class="incomeResults">
+                        <p class="resultLabel gross">Est. Yearly Gross:</p>
+                        <input id="yearlyGross" class="resultText gross" disabled />
+                    </div>
+                </div>
+                <div id="incomeNext">
+                    <a href="budget.html"><button class="next">Next</button></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

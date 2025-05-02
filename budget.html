@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="Viewport"
+              content="width=device-width" />
+        
+        <title>ClassicHando's Financial Friend</title>
+
+        <link rel="stylesheet"
+              href="styles/PageStyle.css" />
+        <link rel="stylesheet"
+              href="styles/MainTabs.css" />
+        <link rel="stylesheet"
+              href="styles/budget.css" />
+
+              <script src="scripts/budget.js"></script>
+    </head>
+
+    <body onLoad="calculate()">
+        <div class="MainTabs">
+            <div class="TabContainer">
+                <div id="Group1" class="MainTabGroup">
+                    <div class="ButtonContainer">
+                        <a href="index.html"><button class="MainButton">Welcome</button></a>
+                        <a href="goals.html"><button class="MainButton">Groovy<br>Goals</button></a>
+                        <a href="income.html"><button class="MainButton">Income<br>Initializer</button></a>
+                        <a><button class="MainButton Selected">Budget<br>Buddy</button></a>
+                    </div>
+                </div>
+
+                <div id="Group2" class="MainTabGroup">
+                    <div class="ButtonContainer">
+                        <a href="loan.html"><button class="MainButton">Loan Term<br>Estimator</button></a>
+                        <a href="resources.html"><button class="MainButton">Resources</button></a>
+                        <a href="about.html"><button class="MainButton">About</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="budgetGroup" class="MainContent">
+            <div id="budgetInputs">
+                <div id="budgetHeader" class="header">
+                    <h1>Budget Buddy</h1>
+                </div>
+                <div id="budgetInstructions" class="instruction">
+                    <p>
+                        I've got you started with some of the 'usual suspects' listed below. The names are for you
+                         so change them to whatever suits your need! Put the amounts in the right column and they 
+                         will automatically add to your Expenses!
+                    </p>
+                </div>
+
+                <div class="inputRow">
+                    <div class="inputLabel">
+                        <input class="name" onClick="this.setSelectionRange(0, this.value.length)" 
+                                type="text" maxlength="30" value="Rent/Mortgage"/>
+                    </div>
+                    <div class="inputAmount">
+                        <input class="amount" 
+                                onClick="this.setSelectionRange(0, this.value.length)" 
+                                onChange="calculate()"
+                                type="text" 
+                                maxlength="15" />
+                    </div>
+                </div>
+
+                <div class="inputRow">
+                    <div class="inputLabel">
+                        <input class="name" onClick="this.setSelectionRange(0, this.value.length)" 
+                                type="text" maxlength="30" value="Car + Insurance"/>
+                    </div>
+                    <div class="inputAmount">
+                        <input class="amount" 
+                        onClick="this.setSelectionRange(0, this.value.length)" 
+                        onChange="calculate()"
+                        type="text" 
+                        maxlength="15" />
+                    </div>
+                </div>
+
+                <div class="inputRow">
+                    <div class="inputLabel">
+                        <input class="name" onClick="this.setSelectionRange(0, this.value.length)" 
+                                type="text" maxlength="30" value="Phone"/>
+                    </div>
+                    <div class="inputAmount">
+                        <input class="amount" 
+                        onClick="this.setSelectionRange(0, this.value.length)" 
+                        onChange="calculate()"
+                        type="text" 
+                        maxlength="15" />
+                    </div>
+                </div>
+
+                <div class="inputRow">
+                    <div class="inputLabel">
+                        <input class="name" onClick="this.setSelectionRange(0, this.value.length)" 
+                                type="text" maxlength="30" value="Utilities"/>
+                    </div>
+                    <div class="inputAmount">
+                        <input class="amount" 
+                        onClick="this.setSelectionRange(0, this.value.length)" 
+                        onChange="calculate()"
+                        type="text" 
+                        maxlength="15" />
+                    </div>
+                </div>
+
+                <div class="inputRow">
+                    <div class="inputLabel">
+                        <input class="name" onClick="this.setSelectionRange(0, this.value.length)" 
+                                type="text" maxlength="30" value="Credit Cards/Other Loans"/>
+                    </div>
+                    <div class="inputAmount">
+                        <input class="amount" 
+                        onClick="this.setSelectionRange(0, this.value.length)" 
+                        onChange="calculate()"
+                        type="text" 
+                        maxlength="15" />
+                    </div>
+                </div>
+
+                <div class="inputRow">
+                    <div class="inputLabel">
+                        <input class="name" onClick="this.setSelectionRange(0, this.value.length)" 
+                                type="text" maxlength="30" value=""/>
+                    </div>
+                    <div class="inputAmount">
+                        <input class="amount" 
+                        onClick="this.setSelectionRange(0, this.value.length)" 
+                        onChange="calculate()"
+                        type="text" 
+                        maxlength="15" />
+                    </div>
+                </div>
+
+                <div class="inputRow">
+                    <div class="inputLabel">
+                        <input class="name" onClick="this.setSelectionRange(0, this.value.length)" 
+                                type="text" maxlength="30" value=""/>
+                    </div>
+                    <div class="inputAmount">
+                        <input class="amount" 
+                        onClick="this.setSelectionRange(0, this.value.length)" 
+                        onChange="calculate()"
+                        type="text" 
+                        maxlength="15" />
+                    </div>
+                </div>
+
+                <div class="inputRow">
+                    <div class="inputLabel">
+                        <input class="name" onClick="this.setSelectionRange(0, this.value.length)" 
+                                type="text" maxlength="30" value=""/>
+                    </div>
+                    <div class="inputAmount">
+                        <input class="amount" 
+                        onClick="this.setSelectionRange(0, this.value.length)" 
+                        onChange="calculate()"
+                        type="text" 
+                        maxlength="15" />
+                    </div>
+                </div>
+
+                <div class="inputRow">
+                    <div class="inputLabel">
+                        <input class="name" onClick="this.setSelectionRange(0, this.value.length)" 
+                                type="text" maxlength="30" value=""/>
+                    </div>
+                    <div class="inputAmount">
+                        <input class="amount" 
+                        onClick="this.setSelectionRange(0, this.value.length)" 
+                        onChange="calculate()"
+                        type="text" 
+                        maxlength="15" />
+                    </div>
+                </div>
+
+                <div class="inputRow">
+                    <div class="inputLabel">
+                        <input class="name" onClick="this.setSelectionRange(0, this.value.length)" 
+                                type="text" maxlength="30" value=""/>
+                    </div>
+                    <div class="inputAmount">
+                        <input class="amount" 
+                        onClick="this.setSelectionRange(0, this.value.length)" 
+                        onChange="calculate()"
+                        type="text" 
+                        maxlength="15" />
+                    </div>
+                </div>
+
+                <div class="inputRow">
+                    <div class="inputLabel">
+                        <input class="name" onClick="this.setSelectionRange(0, this.value.length)" 
+                                type="text" maxlength="30" value=""/>
+                    </div>
+                    <div class="inputAmount">
+                        <input class="amount" 
+                        onClick="this.setSelectionRange(0, this.value.length)" 
+                        onChange="calculate()"
+                        type="text" 
+                        maxlength="15" />
+                    </div>
+                </div>
+
+                <div id="budgetFooter">
+                    <p class="small">
+                        I decided to limit the available rows somewhat to encourage you to think about
+                        your spending and what is actually NECESSARY to budget for. Depending on how tight
+                        things are, there are those things you cut last and things you 
+                        cut first. The things I want to encourage being here are
+                        the things you NEED to pay.<br><br>
+
+                        ©2023 Chris Hand
+                    </p>
+                </div>
+            </div>
+
+            <div id="budgetResults">
+                <div id="budgetPanelPadder"></div>
+                <div id="budgetPanel">
+                    <div class="padder"></div>
+
+                    <div class="inputRow">
+                        <div class="inputLabel">
+                            <p>Est. Monthly Income:</p>
+                        </div>
+                        <div class="inputAmount">
+                            <input id="income" class="result"
+                            onClick="this.setSelectionRange(0, this.value.length)" 
+                            onChange="calculate()"
+                            type="text" 
+                            maxlength="15" />
+                        </div>
+                    </div>
+
+                    <div class="inputRow">
+                        <div class="inputLabel">
+                            <p>Minus Expenses:</p>
+                        </div>
+                        <div class="inputAmount">
+                            <input id="expenses" class="result" 
+                            onClick="this.setSelectionRange(0, this.value.length)" 
+                            type="text" 
+                            disabled />
+                        </div>
+                    </div>
+
+                    <div class="line"></div>
+
+                    <div class="inputRow">
+                        <div class="inputLabel">
+                            <p>Remaining Funds:</p>
+                        </div>
+                        <div class="inputAmount">
+                            <input id="remainder" class="result" 
+                            onClick="this.setSelectionRange(0, this.value.length)" 
+                            type="text" 
+                            disabled />
+                        </div>
+                    </div>
+
+                    <div class="padder"></div>
+
+                    <p class="visible">
+                        Now that you've got your budget and income set up, if you have excess
+                        funds, you can allocate those by percent down below however you would
+                        like. If the total is greater than 100 when you hit calculate, no 
+                        results will show!
+                    </p>
+
+                    <div class="padder"></div>
+
+                    <div class="percentRow">
+                        <div class="name">
+                            <input type="text" class="visible"
+                                    onClick="this.setSelectionRange(0, this.value.length)"
+                                    value="Debt Paydown"
+                                    />
+                        </div>
+                        <div class="percent">
+                            <input type="text" class="perc visible"
+                                    onClick="this.setSelectionRange(0, this.value.length)"
+                                    value="30"
+                                    />
+                        </div>
+                        <div class="result">
+                            <input type="text" class="total visible"
+                                    onClick="this.setSelectionRange(0, this.value.length)"
+                                    disabled />
+                        </div>
+                    </div>
+
+                    <div class="percentRow">
+                        <div class="name">
+                            <input type="text" class="visible"
+                                    onClick="this.setSelectionRange(0, this.value.length)"
+                                    value="Emergency"
+                                    />
+                        </div>
+                        <div class="percent">
+                            <input type="text" class="perc visible"
+                                    onClick="this.setSelectionRange(0, this.value.length)"
+                                    value="25"
+                                    />
+                        </div>
+                        <div class="result">
+                            <input type="text" class="total visible"
+                                    onClick="this.setSelectionRange(0, this.value.length)"
+                                    disabled />
+                        </div>
+                    </div>
+
+                    <div class="percentRow">
+                        <div class="name">
+                            <input type="text" class="visible"
+                                    onClick="this.setSelectionRange(0, this.value.length)"
+                                    value="Savings"
+                                    />
+                        </div>
+                        <div class="percent">
+                            <input type="text" class="perc visible"
+                                    onClick="this.setSelectionRange(0, this.value.length)"
+                                    value="30"
+                                    />
+                        </div>
+                        <div class="result">
+                            <input type="text" class="total visible"
+                                    onClick="this.setSelectionRange(0, this.value.length)"
+                                    disabled />
+                        </div>
+                    </div>
+
+                    <div class="percentRow">
+                        <div class="name">
+                            <input type="text" class="visible"
+                                    onClick="this.setSelectionRange(0, this.value.length)"
+                                    value="Fun"
+                                    />
+                        </div>
+                        <div class="percent">
+                            <input type="text" class="perc visible"
+                                    onClick="this.setSelectionRange(0, this.value.length)"
+                                    value="15"
+                                    />
+                        </div>
+                        <div class="result">
+                            <input type="text" class="total visible"
+                                    onClick="this.setSelectionRange(0, this.value.length)"
+                                    disabled />
+                        </div>
+                    </div>
+
+                    <div class="padder"></div>
+
+                    <div class="calcButtonDiv">
+                        <button class="printButton visible"
+                                onClick="calculateRemainder()">Calculate</button>
+                    </div>
+
+                </div>
+                <div id="budgetNext">
+                    <a href="loan.html"><button class="next">Next</button></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

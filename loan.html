@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="Viewport"
+              content="width=device-width" />
+        
+        <title>ClassicHando's Financial Friend</title>
+
+        <link rel="stylesheet"
+              href="styles/PageStyle.css" />
+        <link rel="stylesheet"
+              href="styles/MainTabsReverse.css" />
+        <link rel="stylesheet"
+              href="styles/loan.css" />
+
+        <script src="scripts/loan.js"></script>
+    </head>
+
+    <body onLoad="inputZero()">
+        <div class="MainTabs">
+            <div class="TabContainer">
+                <div id="Group1" class="MainTabGroup">
+                    <div class="ButtonContainer">
+                        <a href="index.html"><button class="MainButton">Welcome</button></a>
+                        <a href="goals.html"><button class="MainButton">Groovy<br>Goals</button></a>
+                        <a href="income.html"><button class="MainButton">Income<br>Initializer</button></a>
+                        <a href="budget.html"><button class="MainButton">Budget<br>Buddy</button></a>
+                    </div>
+                </div>
+
+                <div id="Group2" class="MainTabGroup">
+                    <div class="ButtonContainer">
+                        <a><button class="MainButton Selected">Loan Term<br>Estimator</button></a>
+                        <a href="resources.html"><button class="MainButton">Resources</button></a>
+                        <a href="about.html"><button class="MainButton">About</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="loanGroup" class="MainContent">
+            <div id="loanInputs">      
+                <div id="loanHeader" class="header">
+                    <h1>Loan Term Estimator</h1>
+                </div>
+
+                <div id="loanInstructions" class="instruction">
+                    <p>To use, enter the amount of the loan (or the amount left), the Interest
+                        rate, and the time of the loan (or time left) in months and hit Calculate!
+                        Only numbers are needed. Percents and currency symbols are not required.
+                    </p>
+                </div>
+
+                <div id="loanFields">
+                    <div class="inputRow">
+                        <div class="inputText">
+                            <p>Principal (Amount Owed)</p>
+                        </div>
+                        <div class="inputInput">
+                            <input id="inputPrincipal"
+                                    onClick="this.setSelectionRange(0, this.value.length)" 
+                                    onChange="inputZero();"
+                                    type="text" value="0.00" maxlength="15" />                                    
+                        </div>
+                    </div>
+
+                    <div class="inputRow">
+                        <div class="inputText">
+                            <p>Annual Rate ( % )</p>
+                        </div>
+                        <div class="inputInput">
+                            <input id="inputRate"
+                                    onClick="this.setSelectionRange(0, this.value.length)" 
+                                    onChange="inputZero();"
+                                    type="text" value="0.00" maxlength="15" />                                    
+                        </div>
+                    </div>
+
+                    <div class="inputRow">
+                        <div class="inputText">
+                            <p>Term (Time in months)</p>
+                        </div>
+                        <div class="inputInput">
+                            <input id="inputTerm"
+                                    onClick="this.setSelectionRange(0, this.value.length)" 
+                                    onChange="inputZero();"
+                                    type="text" value="0" maxlength="15" />                                    
+                        </div>
+                    </div>
+
+                    <div id="calcButton">
+                        <button id="mainCalculate" onclick="testClick();">Calculate</button>
+                    </div>
+                </div>
+
+                <div id="loanMin" class="loanAmortResults">
+                    <div class="loanAmort">
+                        <div class="amortLabel">
+                            <p class="vision">
+                                Minimum Payment: 
+                            </p>
+                        </div>
+                        <div class="amortAmount">
+                            <div class="borderBoxy">
+                                <input id="minPay" class="vision" type="text" disabled>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="loanAmort">
+                        <div class="amortLabel">
+                            <p class="vision">
+                                Interest Paid: 
+                            </p>
+                        </div>
+                        <div class="amortAmount">
+                            <div class="borderBoxy">
+                                <input id="minInt" class="vision" type="text" disabled>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="loanAmort">
+                        <div class="amortLabel">
+                            <p class="vision">
+                                Time to Pay: 
+                            </p>
+                        </div>
+                        <div class="amortAmount">
+                            <div class="borderBoxy">
+                                <input id="minTerm" class="vision" type="text" disabled>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="loanDisclaimer" class="footer">
+                    <p class="disclaimer">The results provided by this calculator are only 
+                        to be considered as nothing more than a very rough estimate. If you have questions
+                        pertaining to your specific loan, speak to your Loan Officer or somebody at the
+                        institution that holds your loan. Nothing about your personal situation is assumed
+                        or can be taken into account with this calculator. Nothing about your creditworthiness
+                        or loan elegibility can be inferred from any result given by this calculator.<br><br>
+
+                        ©2023 Chris Hand
+                    </p>
+                </div>
+            </div>
+
+            <div id="loanResults">
+                <div id="loanGrid">
+                    <p>
+                        This calculator uses Simple Interest and a basic Amortization schedule to
+                        determine your minimum payment. For more information on the calculations 
+                        involved, check out the following links (links open to Investopedia in new tab):<br></p>
+                        <ul>
+                            <li><a href="https://www.investopedia.com/terms/s/simple_interest.asp" target="_blank()">Simple Interest</a></li>
+                            <li><a href="https://www.investopedia.com/terms/a/amortization.asp" target="_blank()">Amortization</a></li>
+                        </ul>
+                        <br>
+                        <p>
+                        I have chosen not to include an estimated amortization schedule. If you would like
+                        one, contact the institution that holds your loan and they may be able to give you an
+                        exact schedule or assist you further.
+                    </p>
+                </div>
+                
+                <div id="loanPayment">
+                    <div id="payLabel">
+                        <p class="vision">New Payment:</p>
+                    </div>
+                    <div id="payInput">
+                        <input id='newPayment' class="vision" onClick="this.setSelectionRange(0, this.value.length)"
+                               type="text" value="" maxLength="15" />
+                    </div>
+                    <div id="amortButton">
+                        <button class="vision" onClick="calcNewPayment();">Calculate</button>
+                    </div>
+                    
+                </div>
+
+                <div id="loanGridPayment" class="loanAmortResults">
+
+                    <div class="loanAmort">
+                        <div class="amortLabel">
+                            <p id="calcPayLabel" class="vision">
+                                Calculated Payment: 
+                            </p>
+                        </div>
+                        <div class="amortAmount">
+                            <div class="borderBoxy">
+                                <input id="calcPay" class="vision" type="text" disabled>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="loanAmort">
+                        <div class="amortLabel">
+                            <p id="calcIntLabel" class="vision">
+                                Interest Paid: 
+                            </p>
+                        </div>
+                        <div class="amortAmount">
+                            <div class="borderBoxy">
+                                <input id="calcInt" class="vision" type="text" disabled>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="loanAmort">
+                        <div class="amortLabel">
+                            <p id="calcTermLabel" class="vision">
+                                Time to Pay:
+                            </p>
+                        </div>
+                        <div class="amortAmount">
+                            <div class="borderBoxy">
+                                <input id="calcTerm" class="vision" type="text" disabled>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                </div>
+
+                <div id="loanNext">
+                    <a href="resources.html"><button class="next">Next</button></a>
+                </div>
+            </div>
+
+        </div>
+    </body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="Viewport"
+              content="width=device-width" />
+        
+        <title>ClassicHando's Financial Friend</title>
+
+        <link rel="stylesheet"
+              href="styles/PageStyle.css" />
+        <link rel="stylesheet"
+              href="styles/MainTabs.css" /> 
+        <link rel="stylesheet"
+              href="styles/goal.css" />
+    </head>
+
+    <body>
+        <div class="MainTabs">
+            <div class="TabContainer">
+                <div id="Group1" class="MainTabGroup">
+                    <div class="ButtonContainer">
+                        <a href="index.html"><button class="MainButton">Welcome</button></a>
+                        <a><button class="MainButton Selected">Groovy<br>Goals</button></a>
+                        <a href="income.html"><button class="MainButton">Income<br>Initializer</button></a>
+                        <a href="budget.html"><button class="MainButton">Budget<br>Buddy</button></a>
+                    </div>
+                </div>
+
+                <div id="Group2" class="MainTabGroup">
+                    <div class="ButtonContainer">
+                        <a href="loan.html"><button class="MainButton">Loan Term<br>Estimator</button></a>
+                        <a href="resources.html"><button class="MainButton">Resources</button></a>
+                        <a href="about.html"><button class="MainButton">About</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="goalGroup" class="MainContent print">
+            <div id="goalHeader" class="header">
+                <h1>Groovy Goals</h1>
+            </div>
+
+            <div id="goalInstructions" class="instruction">
+                <p>
+                    First things first, some goals can help!<br><br>
+
+                    Putting something down helps keep you motivated to stay on track. Goals like "Pay down 
+                    debt" or "Save for Vacation" are great! This window (like all) is totally optional, but I do think it helps!<br><br>
+
+                    Let's also be real though. In current times, things like "Pay Rent" or "Groceries" can be very real goals as well. If it's important for you, you should put it here. 
+                </p>
+            </div>
+
+            <div class="goalLabels">
+                <div class="termLabel">
+                    <p>Short-Term Goals ( < 1 Year )</p>
+                </div>
+                <div class="costLabel">
+                    <p>Cost ( Optional )</p>
+                </div>
+            </div>
+
+            <div class="goalTexts">
+                <div class="goalNameText">
+                    <div class="goalInputName">
+                        <input onClick="this.setSelectionRange(0, this.value.length)" type="text" value="Short Term Goal 1" maxlength="35" />
+                    </div>                    
+                </div>
+                <div class="goalCostText">
+                    <div class="goalInputCost">
+                        <input onClick="this.setSelectionRange(0, this.value.length)" type="text" value="0.00" maxlength="12" style="text-align: center;" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="goalTexts">
+                <div class="goalNameText">
+                    <div class="goalInputName">
+                        <input onClick="this.setSelectionRange(0, this.value.length)" type="text" value="Short Term Goal 2" maxlength="35" />
+                    </div>                    
+                </div>
+                <div class="goalCostText">
+                    <div class="goalInputCost">
+                        <input onClick="this.setSelectionRange(0, this.value.length)" type="text" value="0.00" maxlength="12" style="text-align: center;" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="goalTexts">
+                <div class="goalNameText">
+                    <div class="goalInputName">
+                        <input onClick="this.setSelectionRange(0, this.value.length)" type="text" value="Short Term Goal 3" maxlength="35" />
+                    </div>                    
+                </div>
+                <div class="goalCostText">
+                    <div class="goalInputCost">
+                        <input onClick="this.setSelectionRange(0, this.value.length)" type="text" value="0.00" maxlength="12" style="text-align: center;" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="goalLabels">
+                <div class="termLabel">
+                    <p>Mid-Term Goals ( 1 - 3 Years )</p>
+                </div>
+            </div>
+
+            <div class="goalTexts">
+                <div class="goalNameText">
+                    <div class="goalInputName">
+                        <input onClick="this.setSelectionRange(0, this.value.length)" type="text" value="Mid Term Goal" maxlength="35" />
+                    </div>                    
+                </div>
+                <div class="goalCostText">
+                    <div class="goalInputCost">
+                        <input onClick="this.setSelectionRange(0, this.value.length)" type="text" value="0.00" maxlength="12" style="text-align: center;" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="goalLabels">
+                <div class="termLabel">
+                    <p>Long-Term Goals ( > 3 Years )</p>
+                </div>
+            </div>
+
+            <div class="goalTexts">
+                <div class="goalNameText">
+                    <div class="goalInputName">
+                        <input onClick="this.setSelectionRange(0, this.value.length)" type="text" value="Long Term Goal" maxlength="35" />
+                    </div>                    
+                </div>
+                <div class="goalCostText">
+                    <div class="goalInputCost">
+                        <input onClick="this.setSelectionRange(0, this.value.length)" type="text" value="0.00" maxlength="12" style="text-align: center;" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="goalFooter">
+                <div class="goalDisclaimer">
+                    <p class="small">
+                        ©2023 Chris Hand
+                    </p>
+                </div>
+                <div class="goalPrint">
+                    <button onClick="window.print();" class="printButton">Print 'em<br>Up!</button>
+                </div>
+                <div class="goalNext">
+                    <a href="income.html"><button class="next">Next</button></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
