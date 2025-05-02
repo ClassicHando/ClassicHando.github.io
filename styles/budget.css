@@ -1,0 +1,164 @@
+input {
+    width: 90%;
+    text-align: center;
+    font-size: 1.75vmin;
+}
+
+p, ul, li { 
+    font-size: 2vmin;
+}
+
+.small {
+    font-size: 1.6vmin;
+}
+
+.inputRow {
+    width: 100%;
+    height: 4.8%;
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    justify-content: center;
+
+    .inputLabel {
+        width: 45%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+
+        input {
+            width: 90%;
+        }
+
+        p {
+            width: 80%;
+            text-align: right;
+        }
+    }
+
+    .inputAmount {
+        width: 40%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+
+        input {
+            width: 60%;
+        }
+    }
+}
+
+#budgetGroup {
+    float: left;
+    display: flex;
+    flex-direction: row;
+
+    #budgetInputs {
+        width: 50%;
+        height: 100%;
+        float: left;
+
+        #budgetHeader { 
+            padding-left: 1%; 
+        }
+
+        #budgetInstructions {
+            padding-left: 1%;
+            width: 95%;
+            display: flex;
+            flex-direction: row;
+            align-items: start;
+        }
+
+        #budgetFooter {
+            width: 100%;
+            height: 20.2%;
+            display: flex;
+            flex-direction: row;
+            align-items: end;
+            justify-content: left;
+        }
+    }
+
+    #budgetResults {
+        width: 50%;
+        height: 100%;       
+        
+        #budgetPanelPadder {
+            height: 5%;
+            width: 100%;
+        }
+
+        #budgetPanel {
+            width: 90%;
+            height: 73%;
+            background-color: var(--panel-bg);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .padder {
+                height: 5%;
+            }
+
+            .inputRow {
+                height: 6%;
+            }
+
+            .line {
+                height: 0.5%;
+                width: 75%;
+                background-color: var(--button-text);
+                margin: 1%;
+            }
+
+            .percentRow {
+                height: 8%;
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+
+                .name {
+                    width: 30%;
+                }
+
+                .percent {
+                    width: 10%;
+                }
+
+                .result {
+                    margin-left: 2%;
+                    width: 40%;
+                }
+            }
+
+            .calcButtonDiv {
+                width: 100%;
+                height: 15%;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-content: center;
+
+                button { 
+                    width: 20%;
+                    height: 70%;
+
+                    font-size: 1.75vmin;
+                }
+            }
+        }
+
+        #budgetNext {
+            width: 80%;
+            height: 19%;
+            float: right;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: end;
+        }
+    }
+}

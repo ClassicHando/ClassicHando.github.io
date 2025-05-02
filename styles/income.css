@@ -1,0 +1,118 @@
+input {
+    text-align: center;
+    width: 100%;
+}
+
+label {
+    font-family: LexendDeca;
+    font-size: 2vmin;
+    font-weight: 500;
+    color: var(--button-text);
+    display: block;  
+    text-align: center;
+}
+
+#incomeGroup {
+    float: left;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    #incomeMain {
+        width: 60%;
+        height: 100%;   
+
+        #incomeRadios {
+            width: 100%;
+            height: 8%;
+            display: flex;
+            flex-direction: row;
+
+            div {
+                width: 25%;
+                height: 100%;
+
+                label {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+
+        .horizontalPad {
+            width: 100%;
+            height: 5%;
+        }
+
+        .incomeInputRow {
+            width: 100%;
+            height: 5%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            .incomeText {
+                width: 28%;
+                height: 100%;
+                margin-left: 2%;
+                display: flex;
+                align-items: center;
+                justify-content: right;
+            }
+
+            .incomeInput {
+                width: 20%;
+            }
+        }
+
+        #incomeFooter {
+            height: 30%;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: left;
+            align-items: end;
+        }
+    }
+
+    #incomeResults {
+        width: 40%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+
+        #incomeTexts{
+            width: 100%;
+            height: 80%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .padderLarge {
+                height: 30%;
+                width: 100%;
+            }
+
+            .padderSmall {
+                height: 15%;
+                width: 100%;
+            }
+
+            #incomeResults {
+                height: 20%;
+                width: 100%;
+            }
+        }
+
+        #incomeNext {
+            width: 100%;
+            height: 17%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: end;
+        }
+
+    }
+}

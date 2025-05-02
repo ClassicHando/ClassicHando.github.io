@@ -1,0 +1,133 @@
+@font-face {
+    font-family: LexendDeca;
+    src: url(../fonts/LexendDeca-VariableFont_wght.ttf);
+}
+
+@media print {
+    body { visibility: hidden; }
+    .print { visibility: visible; }
+    .noprint {visibility: hidden; }
+    button { visibility: hidden; }
+}
+
+:root {
+    --indent: 2%;
+
+    --main-bg: papayawhip;
+    --main-unselected: darkgoldenrod;
+
+    --button-bg: darkseagreen;
+    --button-text: darkslategray;
+
+    --panel-bg: thistle;
+}
+
+body, html {    
+    width: 100%;
+    height: 100%;
+    background-color: var(--main-bg);
+    border: 0;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+    background-color: var(--main-bg);  
+}
+
+h1 {
+    font-family: LexendDeca;
+    font-size: 3vmin;
+    font-weight: 600;
+    color: var(--button-text);
+    margin-left: var(--indent);
+}
+
+p, li, ul {
+    font-family: LexendDeca;
+    font-size: 2vmin;
+    font-weight: 500;
+    color: var(--button-text);
+    margin-left: calc(var(--indent) * 2);  
+    margin-right: calc(var(--indent) * 2); 
+}
+
+ul {
+    margin: 0;
+}
+
+.disclaimer {
+    font-style: italic;
+    font-size: 1.5vmin;
+}
+
+.small {
+    font-size: 1.5vmin;
+}
+
+button {
+    font-family: LexendDeca;
+    font-size: 2vmin;
+    font-weight: 500;
+
+    border-width: medium;
+    border-color: var(--button-text);
+    background-color: var(--button-bg);
+    text-decoration: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.donate {
+    padding: 2vmin;
+    padding-top: 3vmin;
+    padding-bottom: 3vmin;
+}
+
+.next {
+    font-size: 2.5vmin;
+    padding-top: 3vmin;
+    padding-bottom: 3vmin;
+    padding-left: 5vmin;
+    padding-right: 5vmin;
+}
+
+.printButton {
+    font-size: 2.5vmin;
+    padding-top: 1vmin;
+    padding-bottom: 1vmin;
+    padding-left: 2vmin;
+    padding-right: 2vmin;
+}
+
+input {
+    font-family: LexendDeca;
+    font-size: 2vmin;
+    font-weight: 500;
+    color: var(--button-text);
+}
+
+.MainContent {
+    border: 0;
+    padding: 0;
+
+    .header {
+        width: 80%;
+        height: 8%;
+        display: flex;
+        align-items: center;
+    }
+
+    .instruction {
+        width: 90%;
+        height: 17%;
+        display: flex;
+        align-items: center;
+    }
+
+    .content {
+        width: 100%;
+        height: 60%;
+        float: left;
+    }
+}

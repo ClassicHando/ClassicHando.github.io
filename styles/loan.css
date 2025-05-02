@@ -1,0 +1,206 @@
+input {
+    text-align: center;
+    width: 60%;
+}
+
+p, ul, li { 
+    font-size: 1.75vmin;
+}
+
+.disclaimer {
+    font-size: 1.25vmin;
+}
+
+.loanAmortResults {
+    .loanAmort {
+        width: 100%;
+        height: 25%;
+        float: left;
+        display: flex;
+        flex-direction: row;
+
+        .amortLabel {
+            width: 40%;
+            height: 100%;
+            float: left;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: right;
+
+        }
+
+        .amortAmount {
+            width: 50%;
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: left;
+        }
+    }
+}
+
+.inputRow {
+    width: 100%;
+    height: 15%;
+    float: left;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    .inputText {
+        width: 50%;
+        height: 100%;
+        float: left;  
+        display: flex;    
+        flex-direction: row;
+        justify-content: right;  
+        align-items: center;
+    }
+
+    .inputInput {
+        width: 50%;
+        float: right;
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        align-items: center;
+    }
+}
+
+#loanGroup {
+    float: left;
+
+    #loanInputs {
+        width: 50%;
+        height: 100%;
+        float: left;
+
+        #loanHeader {
+            padding-left: 1%;
+        }
+
+        #loanInstructions {
+            width: 95%;
+            padding-left: 1%;
+            display: flex;
+            flex-direction: row;
+            align-items: start;
+        }
+
+        #loanFields {
+            height: 30%;
+            width: 100%;
+            float: left;            
+
+            #calcButton {
+                width: 100%;
+                height: 55%;
+                float: left;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+
+                button {
+                    height: 60%;
+                    width: 25%;
+                }
+            }
+        }
+
+        #loanMin {
+            height: 25%;
+            width: 100%;
+            float: left;
+        }
+
+        #loanDisclaimer {
+            height: 17%;
+            width: 98%;
+            float: left;
+            display: flex;
+            align-items: end;
+            padding-left: 1%;
+        }
+    }
+
+    #loanResults {
+        width: 50%;
+        height: 100%;
+        float: right;
+
+        #loanGrid {
+            height: 47%;
+            width: 100%;
+            float: left;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            p, ul, li {
+                width: 80%;
+            }
+        }
+
+        #loanPayment {
+            height: 8%;
+            width: 100%;
+            float: left;
+            display: flex;
+            align-items: center;
+
+            #payLabel {
+                height: 100%;
+                width: 25%;
+                display: flex;
+                justify-content: right;
+                align-items: center;
+            }
+
+            #payInput {
+                height: 100%;
+                width: 40%;
+                display: flex;
+                justify-content: left;
+                align-items: center;
+
+                input {
+                    width: 100%;
+                }
+            }
+
+            #amortButton {
+                height: 100%;
+                width: 35%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                button {
+                    width: 50%;
+                    height: 70%;
+                }
+            }
+        }
+
+        #loanGridPayment {
+            height: 25%;
+            width: 100%;
+            float: left;
+        }
+
+        #loanNext {
+            height: 17%;
+            width: 80%;
+            float: right;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: end;
+        }
+    }
+}
